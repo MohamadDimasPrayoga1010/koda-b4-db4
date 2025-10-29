@@ -10,6 +10,7 @@ CREATE TABLE users(
 CREATE TABLE password_reset(
     id SERIAL PRIMARY KEY,
     user_id int,
+    token VARCHAR(100)
     reset_password VARCHAR(100) NOT NULL UNIQUE,
     CONSTRAINT password_reset_user Foreign Key (user_id) REFERENCES users(id),
     created_at TIMESTAMP DEFAULT now(),
@@ -20,6 +21,7 @@ CREATE TABLE login(
     id SERIAL PRIMARY KEY,
     user_id int,
     success BOOLEAN,
+    token VARCHAR(100)
     created_at TIMESTAMP DEFAULT now(),
     updated_ad TIMESTAMP DEFAULT now()
 )

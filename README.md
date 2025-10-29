@@ -13,12 +13,14 @@ users{
 password_reset{
     int id
     int user_id
+    string token
     varchar(100) reset_password
 }
 
 login{
     int id
     int user_id
+    sting token
     boolean success
 }
 
