@@ -15,7 +15,7 @@ users{
 password_reset{
     int id
     int user_id
-    string token
+    varchar(100) token
     varchar(100) reset_password
     updated_at timestamp
     created_at timestamp
@@ -24,7 +24,7 @@ password_reset{
 login{
     int id
     int user_id
-    sting token
+    varchar(100) token
     boolean success
 }
 
