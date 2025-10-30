@@ -8,6 +8,8 @@ users{
     varchar(100) username
     varchar(100) email
     varchar(100) password
+    created_at timestamp
+    updated_at timestamp
 }
 
 password_reset{
@@ -15,6 +17,8 @@ password_reset{
     int user_id
     string token
     varchar(100) reset_password
+    updated_at timestamp
+    created_at timestamp
 }
 
 login{
